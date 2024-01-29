@@ -1,6 +1,6 @@
 @ECHO OFF
 cd %~dp0
-:: ERST ·¢²¼ÓÚè÷ß÷
+:: ERST å‘å¸ƒäºŽæ¢“å–µ
 if exist CloudflareST.exe (GOTO t2) else (GOTO DL)
 :t2
 if exist ip.txt (GOTO t3) else (GOTO DL)
@@ -8,7 +8,7 @@ if exist ip.txt (GOTO t3) else (GOTO DL)
 if exist ipv6.txt (GOTO MENU) else (GOTO DL)
 
 :DL
-ECHO.¼ì²âµ½È±ÉÙCloudflareST.exeµÈÏà¹ØÎÄ¼þ ÕýÔÚ»ñÈ¡....
+ECHO.æ£€æµ‹åˆ°ç¼ºå°‘CloudflareST.exeç­‰ç›¸å…³æ–‡ä»¶ æ­£åœ¨èŽ·å–....
 powershell (new-object Net.WebClient).DownloadFile('https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_windows_amd64.zip','CloudflareST_windows_amd64.zip')
 powershell -command "Expand-Archive -Force '%~dp0CloudflareST_windows_amd64.zip' '%~dp0'"
 del CloudflareST_windows_amd64.zip
@@ -26,19 +26,19 @@ GOTO MENU
 :MENU
 cls
 ECHO.
-ECHO.                            Cloudflare²âËÙ
+ECHO.                            Cloudflareæµ‹é€Ÿ
 ECHO.
-ECHO.                       1  ²âËÙIPV4
+ECHO.                       1  æµ‹é€ŸIPV4
 ECHO.
-ECHO.                       2  ²âËÙIPV6
+ECHO.                       2  æµ‹é€ŸIPV6
 ECHO.
-ECHO.                       3  ²âËÙIPV4+IPV6
+ECHO.                       3  æµ‹é€ŸIPV4+IPV6
 ECHO.
-ECHO.                       4  ÍË   ³ö
+ECHO.                       4  é€€   å‡º
 ECHO.
 ECHO.
 ECHO.
-choice /C 1234 /N /M "ÇëÊäÈëÑ¡ÔñÏîÄ¿µÄÐòºÅ£º"
+choice /C 1234 /N /M "è¯·è¾“å…¥é€‰æ‹©é¡¹ç›®çš„åºå·ï¼š"
 
 IF ERRORLEVEL 4 GOTO exit
 IF ERRORLEVEL 3 GOTO cmd3
@@ -53,11 +53,11 @@ ECHO.
 ECHO.
 ECHO.
 ECHO.
-ECHO.·ÀÖ¹»¹Î´¼ÇÂ¼½á¹û£¬´íÎóµÄ°´ÏÂ»Ø³µ¼ü»òCtrl+C
+ECHO.é˜²æ­¢è¿˜æœªè®°å½•ç»“æžœï¼Œé”™è¯¯çš„æŒ‰ä¸‹å›žè½¦é”®æˆ–Ctrl+C
 ECHO. 
-ECHO.ÇëÔÙ´Î°´1·µ»Ø²Ëµ¥£¬°´2ÍË³ö½Å±¾
+ECHO.è¯·å†æ¬¡æŒ‰1è¿”å›žèœå•ï¼ŒæŒ‰2é€€å‡ºè„šæœ¬
 ECHO. 
-choice /C 12 /N /M "ÇëÊäÈëÑ¡ÔñÏîÄ¿µÄÐòºÅ£º"
+choice /C 12 /N /M "è¯·è¾“å…¥é€‰æ‹©é¡¹ç›®çš„åºå·ï¼š"
 
 IF ERRORLEVEL 2 GOTO exit
 IF ERRORLEVEL 1 GOTO MENU
@@ -71,11 +71,11 @@ ECHO.
 ECHO.
 ECHO.
 ECHO.
-ECHO.·ÀÖ¹»¹Î´¼ÇÂ¼½á¹û£¬´íÎóµÄ°´ÏÂ»Ø³µ¼ü»òCtrl+C
+ECHO.é˜²æ­¢è¿˜æœªè®°å½•ç»“æžœï¼Œé”™è¯¯çš„æŒ‰ä¸‹å›žè½¦é”®æˆ–Ctrl+C
 ECHO. 
-ECHO.ÇëÔÙ´Î°´1·µ»Ø²Ëµ¥£¬°´2ÍË³ö½Å±¾
+ECHO.è¯·å†æ¬¡æŒ‰1è¿”å›žèœå•ï¼ŒæŒ‰2é€€å‡ºè„šæœ¬
 ECHO. 
-choice /C 12 /N /M "ÇëÊäÈëÑ¡ÔñÏîÄ¿µÄÐòºÅ£º"
+choice /C 12 /N /M "è¯·è¾“å…¥é€‰æ‹©é¡¹ç›®çš„åºå·ï¼š"
 
 IF ERRORLEVEL 2 GOTO exit
 IF ERRORLEVEL 1 GOTO MENU
@@ -91,15 +91,15 @@ ECHO.
 ECHO.
 ECHO.
 ECHO.
-ECHO.·ÀÖ¹»¹Î´¼ÇÂ¼½á¹û£¬´íÎóµÄ°´ÏÂ»Ø³µ¼ü»òCtrl+C
+ECHO.é˜²æ­¢è¿˜æœªè®°å½•ç»“æžœï¼Œé”™è¯¯çš„æŒ‰ä¸‹å›žè½¦é”®æˆ–Ctrl+C
 ECHO. 
-ECHO.ÇëÔÙ´Î°´1·µ»Ø²Ëµ¥£¬°´2ÍË³ö½Å±¾
+ECHO.è¯·å†æ¬¡æŒ‰1è¿”å›žèœå•ï¼ŒæŒ‰2é€€å‡ºè„šæœ¬
 ECHO. 
-choice /C 12 /N /M "ÇëÊäÈëÑ¡ÔñÏîÄ¿µÄÐòºÅ£º"
+choice /C 12 /N /M "è¯·è¾“å…¥é€‰æ‹©é¡¹ç›®çš„åºå·ï¼š"
 
 IF ERRORLEVEL 2 GOTO exit
 IF ERRORLEVEL 1 GOTO MENU
 
 GOTO MENU
 
-:: ERST ·¢²¼ÓÚè÷ß÷
+:: ERST å‘å¸ƒäºŽæ¢“å–µ
