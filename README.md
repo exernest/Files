@@ -48,4 +48,3 @@
 ### 感谢项目
 - _https://github.com/XIU2/CloudflareSpeedTest_
 
-****
